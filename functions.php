@@ -18,4 +18,5 @@
     }
 
     add_action("init", "ds_set_up");
+    add_theme_support("post-thumbnails");
 ?>
