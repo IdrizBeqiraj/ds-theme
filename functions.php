@@ -45,6 +45,22 @@ function themename_widgets_init(){
       'after_title' => '</h3>'
    ));
 }
+function custom_theme_setup() {
+   register_nav_menu('primary', __('Primary Menu'));
+}
+add_action('after_setup_theme', 'custom_theme_setup');
 
 
+
+function custom_sidebar() {
+    register_sidebar(array(
+        'name' => 'Main Sidebar',
+        'id' => 'sidebar-1',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+}
+add_action('widgets_init', 'custom_sidebar');
 ?>

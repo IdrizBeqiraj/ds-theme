@@ -70,6 +70,20 @@
                 </aside>
             <?php endif; ?>
 </div>
+
+
+
+
+<?php
+wp_nav_menu(array(
+    'theme_location' => 'primary',
+    'container'      => 'nav',
+    'menu_class'     => 'my-custom-menu',
+));
+?>
+
+
+
 <?php  get_footer()  ;   ?>
 
  

@@ -18,3 +18,49 @@ Theme Name :DS theme
     color:red;
  }
  
+ .my-custom-menu {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   gap: 10px;
+}
+
+.my-custom-menu li {
+   display: inline-block;
+}
+
+.my-custom-menu a {
+   display: inline-block;
+   text-decoration: none;
+   background-color: #0073e6; /* Button color */
+   color: white;
+   padding: 10px 15px;
+   border-radius: 5px; /* Rounded corners */
+   transition: background 0.3s;
+   font-weight: bold;
+}
+
+.my-custom-menu a:hover {
+   background-color: #005bb5; /* Darker hover effect */
+}
+
+
+.container {
+   display: flex;
+   gap: 20px;
+}
+
+.content {
+   flex: 2;
+   padding: 20px;
+   background: #f9f9f9;
+   border-radius: 5px;
+}
+
+.sidebar {
+   flex: 1;
+   padding: 20px;
+   background: #ddd;
+   border-radius: 5px;
+}
+
