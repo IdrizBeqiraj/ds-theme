@@ -2,7 +2,6 @@
     /* Template Name: Portfolio */
 ?>
 <?php  get_header(); ?>
-
     <div class="row">
         <div class="col-8">
             <?php 
@@ -13,7 +12,6 @@
             "orderby" => "title", 
             "order" => "ASC"
         ];
-        
                 $query=new WP_Query($args);
 
                 if( $query->have_posts()):
@@ -22,7 +20,6 @@
                      <?php
                      endwhile;
                      endif;
-
              ?>
 
         </div>
