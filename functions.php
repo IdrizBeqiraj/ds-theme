@@ -53,7 +53,7 @@ add_action('after_setup_theme', 'custom_theme_setup');
 
 
 function custom_sidebar() {
-    register_sidebar(array(
+    register_sidebar( array(
         'name' => 'Main Sidebar',
         'id' => 'sidebar-1',
         'before_widget' => '<div class="widget">',
@@ -61,6 +61,36 @@ function custom_sidebar() {
         'before_title' => '<h3>',
         'after_title' => '</h3>',
     ));
-}
+};
 add_action('widgets_init', 'custom_sidebar');
+
+function create_post_type(){
+   $labels=array(
+      'name'=>__('Movies'),
+      'singular_name'=>__('movie'),
+      'add_new'=>__("Add Movie",'movie'),
+      'add_new_item'=>__('Add Movie'),
+      'edit_item'=>__("Edit Movie"),
+      'new_item'=>__("New Movie"),
+      'add_items'=>__('All Movies'),
+      'view_item'=>__('View Movie'),
+      'search_item'=>__('Search Movie'),
+      'not_found'=>__('No movies found'),
+      'not_found_in_trash'=>__('No movies found in trash'),
+      'menu_name'=>"Movie"
+   );
+   $args=array(
+      'labels'=>$labels,
+      'description'=>"Movie and single movie details",
+      'public'=>true,
+      'menu_position'=>5,
+      'supports'=>array('title','editor','thumbnail','excerpt','comments'),
+      'menu_icon'=>'dashicons-button',
+      'has_archive'=>true
+   );
+   register_post_type("movie",$args);
+};
+
+add_action('init','create_post_type');
+
 ?>
