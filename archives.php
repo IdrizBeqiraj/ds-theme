@@ -1,5 +1,5 @@
 <?php 
-        /* Template Name */
+        /* Archives */
 ?>
 
 <div class="row">
